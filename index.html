@@ -9,8 +9,11 @@
 </head>
 <body>
     <div class="container"></div>
-    <div class="weather app"</div>
-    <a href="" class="btn btn-primary"></a>
+    <div class="weather-app-wrapper">
+        <div class="weather-app">
+        <div class="overview">
+        </div>
+    
    <h1>
        New York, USA
    </h1> 
@@ -24,12 +27,17 @@
    </ul>
    <div class="row">
        <div class="col-6">
+           <div class="clearfix weather-temperature">
            <img 
            scr="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
            alt="clear"
+           class="float-left"
            />
-           12ºC | º F
+           <div class="float-left">
+           <strong>12</strong><span class="units">ºC | <a href="#">º F</span>
         </div>
+        </div>
+    </div>
         <div class="col-6">
             <ul>
                 <li>
