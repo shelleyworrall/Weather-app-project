@@ -40,8 +40,17 @@ h1 {
 .weather-temperature.units {
     position: relative;
     font-size: 16px;
-    top= -34px;
+    top: -34px;
 }
+.weather-temperature.active {
+    color: rgb(33,33,33);
+    cursor: default;
+
+}
+.weather-temperature.active:hover {
+text-decoration: none;
+}
+
 li {
    list style: none;
     margin: 0;
@@ -54,4 +63,15 @@ li {
 }
 li: first letter{
     text-transform: capitalize;
+}
+.weather li {
+    font-weight: 500px;
+    margin-bottom: 5px;
+    color: rgba(39,33,36,.4);
+    font-size: 16px;
+    line-height: 20px;
+    list-style: none;
+}
+li {
+    text-align: -webkit-match-parent;
 }
