@@ -42,3 +42,16 @@ h1 {
     font-size: 16px;
     top= -34px;
 }
+li {
+   list style: none;
+    margin: 0;
+    padding: 0;
+    color: rgb(135,135,135);
+    font size: 16px;
+    font weight: 100;
+    line-height: 18px;
+
+}
+li: first letter{
+    text-transform: capitalize;
+}
