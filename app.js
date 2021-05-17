@@ -10,10 +10,19 @@ if (minutes < 10) {
 }
 let days= ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 let day=days[date.getDay()];
-    return `${day} ${hours}:${minutes}`;
+let dateElement=document.querySelector(#date);
+dateElement.innerHTML=formatDate(response.data.date * 1000);
+time.innerHTML=`${day} ${hours}:${minutes}`;
 
 }
-
+let searchInput=document.querySelector("#search-text-input");
+let city=document.querySelector("h1");
+city.innerHTML=searchInput.value;
+SearchCity=searchInput.value;
+{
+    let searchForm=document.querySelector("#search-form");
+    addEventListener("submit", changeCity);
+}
 
 function displayTemperature(response) {
  
@@ -58,6 +67,9 @@ function displayFarenheitTemperature(event) {
     event.preventDefault();
     let farenheitTemperature= (temperatureElement.innerHTML * 9) / 5 +32;
     alert(farenheitTemperature);
+    let farenheitLink= document.querySelector("#farenheit-link");
+farenheitLink.addEventListener("click", displayFarenheitTemperature);
+
     let temperatureElement= document.querySelector("#temperature");
     temperatureElement.innerHTML= Math.round(farenheitTemperature);
 }
@@ -72,9 +84,5 @@ function displayCelsiusTemperature(event) {
 search("New York");
 let celsiusTemperature=null;
 
-let form= document.querySelector(#search-form");
-form.addEventListener("submit", handleSubmit );
 
-let farenheitLink= document.querySelector("#farenheit-link");
-farenheitLink.addEventListener("click", displayFarenheitTemperature);
 

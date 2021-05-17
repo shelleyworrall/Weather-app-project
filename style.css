@@ -1,6 +1,4 @@
-body{
-    font-family: ariel, sans-serif;
-}
+
 
 h1 {
     color: #878787;
@@ -29,8 +27,6 @@ li {
     margin: 30px auto;
 }
 .weather-app {
-    max-width: 600px
-    margin: 30px auto;
     padding: 20px;
     border: 1px solid #dadde1;
     border-radius: 5px;
@@ -59,8 +55,12 @@ li {
     color: rgb(33,33,33);
     cursor: default;
 
+}
+.weather-temperature.active:hover {
+text-decoration: none;
+}
 
-li first letter {
+li: first letter{
     text-transform: capitalize;
 }
 .weather li {
@@ -71,7 +71,6 @@ li first letter {
     line-height: 20px;
     list-style: none;
 }
-box-sizing {
-
- border-box;
+li {
+    text-align: -webkit-match-parent;
 }
