@@ -36,7 +36,7 @@ function displayTemperature(response) {
  windElement.innerHTML=Math.round(resonse.data.wind.speed);
 
 let dateElement=document.querySelector(#date);
-dateElement.innerHTML=formatDate(response.data.dt * 1000);
+dateElement.innerHTML=formatDate(response.data.date * 1000);
 
 let iconElement=document.querySelector("#icon");
 iconElement.setAttribute("src"
@@ -44,7 +44,7 @@ iconElement.setAttribute("src"
 }
 
 let apiKey="1cf0147323a8da884b1f3bea8e11e7e";
-let cityKey="Paris";
+let cityKey="New York";
 let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`; 
 
 axios.get(url).then(displayTemperature);
@@ -56,10 +56,10 @@ function handleSubmit(event) {
 }
 function displayFarenheitTemperature(event) {
     event.preventDefault();
-    let farenheitTemperature= (temperatureElement.innerHtml * 9) / 5 +32;
+    let farenheitTemperature= (temperatureElement.innerHTML * 9) / 5 +32;
     alert(farenheitTemperature);
     let temperatureElement= document.querySelector("#temperature");
-    temperatureElement.innerHtml= Math.round(farenheitTemperature);
+    temperatureElement.innerHTML= Math.round(farenheitTemperature);
 }
 function displayCelsiusTemperature(event) {
     event.preventDefault();
@@ -70,9 +70,9 @@ function displayCelsiusTemperature(event) {
 }
 
 search("New York");
-let celciusTemperature=null;
+let celsiusTemperature=null;
 
-let form=document.querySelector(#search-form");
+let form= document.querySelector(#search-form");
 form.addEventListener("submit", handleSubmit );
 
 let farenheitLink= document.querySelector("#farenheit-link");
