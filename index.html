@@ -8,74 +8,79 @@
     integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" 
     crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="src/style.css" />
+
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="src/style.css" />
     <title>Weather App</title>
 </head>
 <body>
     <div class="container">
         <div class="weather-app-wrapper">
-            <div class="weather-app">
+        <div class="weather-app">
+            <form id="search-form class="mb-3">
+                <div class="row">
+                    <div class="col-9">
+                <input 
+                 type="search"
+                 placeholder="Type a city.."
+                 class="form-control"
+                 id="city-input"
+                 autocomplete="off"
+                 />
+                 </div>
+                 <div class="col-3">
+                 <input 
+                 type="submit" 
+                 value="Search" 
+                 class="btn-btn-primary w-100"
+                 />
+                </div>
+                </div>
+                </form>
+        
+            <div class="overview">
 
-    
-            <form id="search-form">
-                <input type="text" autocomplete="off" placeholder="Enter city name" id="search-form" />
-                <input type="submit" value="Search" />
-            </form>
-        </div>
+         <h1 id="city"></h1>
+        <ul>
+       <li> Last updated: <span id="date"></span></li>
+        
+       <li id="description">Clear</li>
+        </ul>
     </div>
 
-   
- 
-   <h1 id="city">New York</h1>
-       
-   
-   <ul>
-       <li> Last updated at<span id="date"> Friday 05:00</span></li>
-        
-       <li id="description">Sunny</li>
-
-   </ul>
-
-   <div class="row align-items-center">
+   <div class="row">
        <div class="col-6">
            <div class="clearfix weather-temperature">
-           <img
-           src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
-           id="icon"
-           alt="Sunny" 
-           class="float-left"
-
-           />
+               <img src="" alt="clear" id="icon" class="float-left"/>
+           <div class="float-left">
+            <strong id="temperature"></strong>
+            <span class="units"><a href="#" id="celsius-link" class="active">ºC</a> |
+             <a href="#" id="farenheit=link">ºF</a></span>
+        </div>
            
-        
-          <strong><span class="temperature" id="temperature">54</strong>
-           <span class="units" id="celsius-link" class="active"> 12ºC</a> |
-            <a href="#" id="farenheit-link">ºF</a></span>
         </div>
         </div>
-    </div>
+
         <div class="col-6">
 
             <ul>
                 <li>Precipitation: 0%
                 </li>
-                <li>
-                    Humidity: <span id="humidity">73%</span></li>
                 
-               <li>Wind: <span id="wind">10 km/h</span></li>
+                 <li>Humidity: <span id="humidity"></span>%</li>
+                
+               <li>Wind: <span id="wind"></span>km/h</li>
                 
             </ul>
+        </div>
+    </div>
+</div>
             <small>
                 <a href="https://github.com/wecodeschool/vanilla-weather-app" target="blank">Open-source code by Shelley Worrall</a>
             
             </small>
-        </div> 
-    </div>
-</div>
-        
-   </div>
+        </div>
    
-   <script src="app.js"></script>>
+   <script src="src/app.js"></script>>
 </body>
 </html>
