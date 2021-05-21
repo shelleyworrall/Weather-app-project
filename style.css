@@ -10,6 +10,9 @@ h1 {
     line-height: 28px;
     margin-bottom: 0;  
 }
+.float-left{
+    font-size: 45px;
+}
 
 ul {
     margin: 0;
@@ -26,7 +29,7 @@ li {
      line-height: 19px;
  
  }
- li:first-letter {
+ li::first-letter {
     text-transform: capitalize;
  }
 .weather-app-wrapper {
@@ -34,19 +37,27 @@ li {
     margin: 30px auto;
 }
 .weather-app {
-    max-width: 600px;
     margin: 30px auto;
     padding: 20px
-    border: 1px solid #dadde1;
+    border: 2px solid;
     border-radius: 5px;
+
+}
+.form-control {
+    background: wheat;
+}
+.btn {
+    background:violet;
+    border-color:turquoise;
+    color:thistle;
 }
 .overview {
     margin-bottom: 20px;
 }
 .weather-temperature img {
-    margin-right: 5px;
-    height: 64px
-    width: 64px
+    display: inline;
+    height: 70px;
+    width: 64px:
 
 }
 .weather-temperature strong {
@@ -68,7 +79,6 @@ li {
 .weather-temperature .active:hover {
     text-decoration: none;
 }
-
 
 
  
