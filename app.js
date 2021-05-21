@@ -1,4 +1,4 @@
-let now = new Date();
+let now= new Date():
 function formatDate(timestamp) {
 let date= new Date(timestamp);
 let hours= date.getHours();
@@ -23,11 +23,12 @@ let days=[
 let day= days[date.getDay()];
 return `${day}${hours}:${minutes}`;
 }
-
 function formatDay(timestamp) {
-    let date=new Date(timestamp * 1000);
+    let date= new Date(timestamp * 1000);
     let day= date.getDay();
-    let days = [ "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+    let days=[
+        "Sun","Mon", "Tue", "Wed", "Thu", "Fri", "Sat"
+    ];
     return days[day];
 }
 
@@ -42,7 +43,6 @@ let dateElement=document.querySelector("#date");
 let iconElement=document.querySelector("#icon");
 
 celsiusTemperature=response.data.main.temp;
-
  temperatureElement.innerHTML= Math.round(celsiusTemperature);
  cityElement.innerHTML= response.data.name;
  descriptionElement.innerHTML =response.data.weather(0).description;
@@ -55,8 +55,7 @@ celsiusTemperature=response.data.main.temp;
     iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 function search(city) {
-let apiKey="1cf0147323a8da884b1f3bea8e11e7e";
-let city= "New York";
+let apiKey="227a999c611b3441effc132333613cec";
 let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`; 
 
 axios.get(apiUrl).then(displayTemperature);
@@ -87,7 +86,7 @@ function displayCelsiusTemperature(event) {
 let celsiusTemperature="null";
 
 let form= document.querySelector("#search-form");
-form.addEventListener("submit" handleSubmit);
+form.addEventListener("submit" , handleSubmit);
 
 
 let farenheitLink= document.querySelector("#farenheit-link");
