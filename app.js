@@ -1,4 +1,4 @@
-let now= new Date():
+let now= new Date();
 function formatDate(timestamp) {
 let date= new Date(timestamp);
 let hours= date.getHours();
