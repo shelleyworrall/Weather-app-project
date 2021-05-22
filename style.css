@@ -44,6 +44,12 @@ li {
     max-width: 800px;
 
 }
+.weather-temp img {
+    display: block;
+    margin-right: 5px;
+    height:  100px;
+    width: 100px;
+}
 
 .overview {
     margin-bottom: 20px;
