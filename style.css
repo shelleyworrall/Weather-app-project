@@ -69,7 +69,6 @@ li {
 .weather-temperature .active {
     color: rgb(33,33,33);
     cursor: default;
-    font-size: 30px;
 
 }
 .weather-temperature .active:hover {
