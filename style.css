@@ -76,3 +76,9 @@ li {
 
 
  
+.weather-temp img {
+    display: block;
+    margin-right: 5px;
+    height:  100px;
+    width: 100px;
+}
