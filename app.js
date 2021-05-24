@@ -35,12 +35,10 @@ function displayForecast(response) {
 
 
   let forecastElement= document.querySelector("#forecast");
-  let days=["Thu", "Fri", "Sat", "Sun"];
 
   let forecastHTML= `<div class="row">`; 
   forecast.forEach(function(forecastDay, index) {
     if (index < 6) {
-
 forecastHTML =
   forecastHTML +
   `
@@ -51,7 +49,7 @@ forecastHTML =
             alt=""
             width="42"
             />
-            <div class="weather-forecast-temperature"></div>
+            <div class="weather-forecast-temperatures"></div>
             <span class="weather-forecast-temperature-max"> ${Math.round(forecastDay.temp.max)}º</span>
             <span class="weather-forecast-temperatire-min">${Math.round(forecastDay.temp.min)}º</span>
             
@@ -83,6 +81,7 @@ function displayTemperature(response) {
   let iconElement = document.querySelector("#icon");
 
   celsiusTemperature = response.data.main.temp;
+
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
   cityElement.innerHTML = response.data.name;
   descriptionElement.innerHTML = response.data.weather[0].description;
@@ -138,7 +137,7 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 search("New York");
-displayForecast();
+
 
 
 
