@@ -49,8 +49,10 @@ function displayForecast(response) {
             width="42"
             />
             <div class="weather-forecast-temperatures">
-            <span class="weather-forecast-temperature-max"> ${Math.round(forecastDay.temp.max)}º</span>
-            <span class="weather-forecast-temperature-min">${Math.round(forecastDay.temp.min)}º</span>
+            <span class="weather-forecast-temperature-max"> 
+            ${Math.round(forecastDay.temp.max)}º </span>
+            <span class="weather-forecast-temperature-min">${Math.
+              round(forecastDay.temp.min)}º </span>
             
             </div>
           </div>
@@ -91,7 +93,9 @@ function displayTemperature(response) {
     "src",
     `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+
   iconElement.setAttribute("alt", response.data.weather[0].description);
+  
   getForecast(response.data.coord);
 
 }
@@ -115,28 +119,19 @@ function displayFahrenheitTemperature(event) {
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
 
-function displayCelsiusTemperature(event) {
-  event.preventDefault();
-  celsiusLink.classList.add("active");
-  fahrenheitLink.classList.remove("active");
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(celsiusTemperature);
-}
 
-let celsiusTemperature = "null";
+
 
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", displayCelsiusTemperature);
+
+
 
 search("New York");
-displayForecast();
+
 
 
 
