@@ -100,6 +100,14 @@ function handleSubmit(event) {
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
+function getPosition(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(showPosition);
+}
+document
+  .querySelector("#current-location")
+  .addEventListener("click", getPosition);
+
 
 
 search("Seattle");
